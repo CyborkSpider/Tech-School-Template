@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-right: 20px;
+    }
+    .sidebar h3 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .sidebar button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #eef1f7;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .sidebar button:hover {
+      background-color: #dce3f2;
+    }
+    .main-content {
+      flex: 1;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header-title {
+      font-size: 24px;
+    }
+    .roadmap-btn {
+      background-color: #eef1f7;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card .info {
+      padding: 10px;
+    }
+    .card .info h4 {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .card .info p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .card .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+    .card button {
+      margin-top: auto;
+      background-color: gray;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Pick Your Specialty</h3>
+      <button data-category="frontend">Front End</button>
+      <button data-category="csharp">Programming Basics C#</button>
+      <button data-category="dotnet">Web Dev .Net</button>
+      <button data-category="nodejs">Web Dev Node.JS</button>
+      <button data-category="flutter">Mobile Dev Flutter</button>
+      <button data-category="mobile-dotnet">Mobile Dev .Net</button>
+      <button data-category="cplusplus">Programming Basics C++</button>
+      <button data-category="data">Data Analysis</button>
+      <button data-category="other">Other</button>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <div class="header-title">Front End</div>
+        <button class="roadmap-btn">📌 Roadmap</button>
+      </div>
+
+      <div class="courses">
+        <div class="card" data-category="other">
+          <img src="img/02e63c9d-a702-4596-a8fc-08b0011a1f46.jpg">
+          <div class="info">
+            <h4>Introduction to Computer Science</h4>
+            <p>By: Ali Shahin</p>
+            <p class="price">Free</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="other">
+          <img src="img/d5c9d5e3-74bf-4b02-8bc5-522be0f846f9.jpg">
+          <div class="info">
+            <h4>Algorithm and Problem Solving</h4>
+            <p>By: Ali Shahin</p>
+            <p class="price">Free</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="cplusplus">
+          <img src="img/fb6e9731-abfc-4e01-bc11-ba561f4c0e81.jpg">
+          <div class="info">
+            <h4>C++</h4>
+            <p>By: Ali Shahin</p>
+            <p class="price">Free</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="cplusplus">
+          <img src="img/138bb85a-082a-4836-abab-7460bdbba9ef.jpg">
+          <div class="info">
+            <h4>C++ OOP</h4>
+            <p>By: Ali Shahin</p>
+            <p class="price">Free</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="frontend">
+          <img src="img/475b451b-8976-49dc-bab4-6750ab9fe3d6.jpg">
+          <div class="info">
+            <h4>HTML</h4>
+            <p>By: Elkhowarji</p>
+            <p class="price">LE 288</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="frontend">
+          <img src="img/a66dd707-08e9-49fb-b2c4-614479d2a475.jpg">
+          <div class="info">
+            <h4>CSS</h4>
+            <p>By: Elkhowarji</p>
+            <p class="price">LE 288</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="frontend">
+          <img src="img/73a72ade-5b0b-43e1-97ef-15c09e431ac1.jpg">
+          <div class="info">
+            <h4>HTML & CSS Project</h4>
+            <p>By: Elkhowarji</p>
+            <p class="price">LE 288</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="frontend">
+          <img src="img/a472c9c1-db4d-4bda-9e01-bbb7158d578f.jpg">
+          <div class="info">
+            <h4>JavaScript</h4>
+            <p>By: Ali Shahin</p>
+            <p class="price">LE 1440</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="frontend">
+          <img src="img/aa7f6374-8db2-469e-a5cd-d11f25e8f220.png">
+          <div class="info">
+            <h4>React</h4>
+            <p>By: Elkhowarji</p>
+            <p class="price">LE 1575</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+        <div class="card" data-category="frontend">
+          <img src="img/164fc917-9c53-448a-a95e-d3c668d08038.jpg">
+          <div class="info">
+            <h4>Angular</h4>
+            <p>By: Ali Shahin</p>
+            <p class="price">LE 2736</p>
+            <button>ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const sidebarButtons = document.querySelectorAll('.sidebar button');
+    const courses = document.querySelectorAll('.courses .card');
+    const headerTitle = document.querySelector('.header-title');
+
+    sidebarButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        headerTitle.textContent = button.textContent;
+
+        courses.forEach(course => {
+          course.style.display = course.getAttribute('data-category') === category ? 'flex' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
